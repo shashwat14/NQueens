@@ -26,9 +26,7 @@ public class Backtracking {
 		//showState(node.state,size);
 		if(constrainSatisfied(node,size)){
 			if (isLeafNode(node,size)){
-				//System.out.println(5);
 				if (isGoalNode(node,size)){
-					//System.out.println(6);
 					//showState(node.state,size);
 					counter++;
 				}
@@ -47,8 +45,8 @@ public class Backtracking {
 		// TODO Auto-generated method stub
 		boolean flag = true;
 		int level = node.level;
-		for(int i = 0; i < level; i++ ){
-			for(int j = i+1; j < level; j++){
+		for(int i = 0; i < (level+1); i++ ){
+			for(int j = i+1; j < (level+1); j++){
 				if ((node.state[i] == node.state[j]) || Math.abs(node.state[i]-node.state[j]) == Math.abs(i-j))
 					flag = false;
 				
